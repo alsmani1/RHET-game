@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion'
 
-/**
- * Full-screen atmospheric overlay: vignette, film grain, stress distortion.
- * Layered on top of scene backgrounds — purely presentational.
- */
+// Full-screen atmospheric overlay: vignette, film grain, stress distortion.
+// Layered on top of scene backgrounds - purely presentational.
 export default function VisualAtmosphere({ stress, procrastination, selfEfficacy }) {
   const vig = 0.2 + (stress / 100) * 0.5
   const notifPulse = procrastination >= 55
