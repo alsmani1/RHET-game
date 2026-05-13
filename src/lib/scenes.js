@@ -54,6 +54,7 @@ export const SCENES = [
     id: 's1',
     title: 'Overwhelmed',
     tagline: 'Monday morning, your head already full.',
+    mood: 'tense',
     getBeats: (ctx) => {
       const t = stressLine(
         ctx,
@@ -102,6 +103,7 @@ export const SCENES = [
     id: 's2',
     title: 'Kitchen Tension',
     tagline: 'They notice you go quiet.',
+    mood: 'warm',
     getBeats: (ctx) => [
       {
         speaker: 'narrator',
@@ -188,6 +190,7 @@ export const SCENES = [
     id: 's3',
     title: 'Hallway Static',
     tagline: 'Another exam gets dropped into the pile.',
+    mood: 'cold',
     getBeats: (ctx) => {
       const parentEcho =
         ctx.flags.parentStyle === 'autonomy'
@@ -255,6 +258,7 @@ export const SCENES = [
     id: 's4',
     title: 'The Pull',
     tagline: 'You meant to study. The screen had other plans.',
+    mood: 'warm',
     getBeats: (ctx) => [
       {
         speaker: 'narrator',
@@ -305,6 +309,7 @@ export const SCENES = [
     id: 's5',
     title: 'Overload',
     tagline: 'Your thoughts start sprinting.',
+    mood: 'tense',
     getBeats: (ctx) => [
       {
         speaker: 'narrator',
@@ -356,6 +361,7 @@ export const SCENES = [
     id: 's6',
     title: 'Regain',
     tagline: 'You try to steer the week back.',
+    mood: 'hopeful',
     getBeats: (ctx) => [
       {
         speaker: 'narrator',
@@ -415,6 +421,7 @@ export const SCENES = [
     id: 's7',
     title: 'The Check-In',
     tagline: 'They see the mess — or the effort.',
+    mood: 'warm',
     getBeats: (ctx) => {
       const prep = ctx.stats.grades - ctx.stats.procrastination * 0.6 + (ctx.flags.planningWins || 0) * 3
       const messy = prep < 42 || ctx.stats.procrastination >= 62
@@ -485,6 +492,7 @@ export const SCENES = [
     id: 's8',
     title: 'Deadline Night',
     tagline: 'The week collides with itself.',
+    mood: 'urgent',
     getBeats: (ctx) => {
       const crisis = ctx.stats.procrastination >= 58 || ctx.stats.stress >= 70
       return [
@@ -532,6 +540,7 @@ export const SCENES = [
     id: 's9',
     title: 'Exam Morning',
     tagline: 'The room smells like pencil shavings and rain.',
+    mood: 'solemn',
     getBeats: (ctx) => {
       const conf =
         ctx.stats.selfEfficacy >= 58 && ctx.stats.procrastination <= 45
@@ -575,6 +584,7 @@ export const SCENES = [
     id: 's10',
     title: 'After',
     tagline: 'The week leaves a shape in you.',
+    mood: 'reflective',
     getBeats: (ctx) => {
       const endingId = ctx._endingId || 'mixed_reflection'
       const epilogues = ENDING_COPY[endingId] || ENDING_COPY.mixed_reflection
