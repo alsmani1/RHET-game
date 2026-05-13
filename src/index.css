@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+/* Base typography + smooth theme transitions driven by data attributes on #root */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
